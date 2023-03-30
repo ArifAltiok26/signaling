@@ -1,0 +1,25 @@
+#pragma once
+namespace ygv::@PROJECT_NAME@
+{
+
+const char *version()
+{
+    return "@PROJECT_VERSION@";
+}
+
+constexpr int version_major()
+{
+    return @PROJECT_VERSION_MAJOR@;
+}
+
+constexpr int version_minor()
+{
+    return @PROJECT_VERSION_MINOR@;
+}
+
+constexpr int version_patch()
+{
+    return @PROJECT_VERSION_PATCH@;
+}
+
+} // namespace ygv::@PROJECT_NAME@
