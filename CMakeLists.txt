@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
-project(signals VERSION 1.0.0)
+project(signaling VERSION 1.0.0)
 
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
@@ -7,8 +7,6 @@ include(CMakePackageConfigHelpers)
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/src/version.template ${CMAKE_CURRENT_SOURCE_DIR}/src/version.h)
 
 add_library(${PROJECT_NAME} INTERFACE)
-
-file(GLOB SrcFiles src/*.h)
 
 target_include_directories(${PROJECT_NAME} 
         INTERFACE 
@@ -58,7 +56,8 @@ install(
 
 install(
         FILES 
-                ${SrcFiles}
+                src/signal.h
+                src/version.h
         DESTINATION 
                 ${CMAKE_INSTALL_INCLUDEDIR}/ygv/${PROJECT_NAME}
 )
